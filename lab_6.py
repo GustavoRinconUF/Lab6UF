@@ -29,7 +29,7 @@ def encoder(og_password):
     return encoded_password
 
 
-#deceoder function done bu Kyle
+#decoder function done by Kyle
 def decoder(encoded_password):
     pass
 
@@ -44,7 +44,7 @@ def main():
         print("-------------")
         print("1. Encode")
         print("2. Decode")
-        print("3. Quit")
+        print("3. Quit\n")
         
         selection = int(input("Please enter an option:"))
 
