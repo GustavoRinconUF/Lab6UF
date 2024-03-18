@@ -5,6 +5,7 @@
 # Kyle Partridge
 # Group 40 
 
+#global variable
 encoded_password = ""
 
 #encoder function done by Gustavo
@@ -13,7 +14,7 @@ def encoder(og_password):
     #reset the encoded password variable
     encoded_password = ""
 
-
+    # loop over the password provided, and shift the numbers up by 3. 0-9
     for digit in og_password:
 
         if int(digit) == 9:
