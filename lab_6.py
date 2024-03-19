@@ -2,7 +2,7 @@
 
 # App done by:
 # Gustavo Rincon UF ID: 84657241
-# Kyle Partridge
+# Kyle Partridge UF ID: 30305326
 # Group 40 
 
 #global variable
@@ -31,12 +31,24 @@ def encoder(og_password):
 
 #decoder function done by Kyle
 def decoder(encoded_password):
-    pass
+    decoded_password = ""
+
+    for digit in encoded_password:
+        if int(digit) == 0:
+            decoded_password += "7"
+        elif int(digit) == 1:
+            decoded_password += "8"
+        elif int(digit) == 2:
+            decoded_password += "9"
+        else:
+            decoded_password += str(int(digit) - 3)
+
+    return decoded_password
 
 
 def main():
 
-    # loops that prints menue and also controls the program's function of encoder and decoder
+    # loops that prints menu and also controls the program's function of encoder and decoder
     while True:
         
         # Menu to the user
@@ -46,13 +58,13 @@ def main():
         print("2. Decode")
         print("3. Quit\n")
         
-        selection = int(input("Please enter an option:"))
+        selection = int(input("Please enter an option: "))
 
         # if user selects 1, then ask user for a password to encode
         if selection == 1:
             
             #asking used for the password to encode, then make the type be a string, then pass to the encoder function
-            encoded_password = encoder(str(input("Please enter your password to encode:")))
+            encoded_password = encoder(str(input("Please enter your password to encode: ")))
             
             #print back the confirmation to the user
             print("Your password has been encoded and stored!\n") 
